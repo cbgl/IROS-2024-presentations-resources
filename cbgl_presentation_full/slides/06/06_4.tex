@@ -1,0 +1,20 @@
+\begin{frame}[noframenumbering]{Background (3/3): Cumulative Absolute Error per Ray (CAER)}
+
+  \begin{overlayarea}{\textwidth}{\textheight}
+
+    \begin{align}
+      \psi(\textcolor{blue}{\mathcal{S}_R(\bm{p})}, \textcolor{red}{\mathcal{S}_V(\hat{\bm{p}})}) &= \sum\limits_{n=0}^{N_s-1}\Big|\textcolor{blue}{\mathcal{S}_R}[\theta_n] - \textcolor{red}{\mathcal{S}_V}[\theta_n] \Big| \text{, where} \nonumber \\
+      \theta_n = -\dfrac{\lambda}{2} + n \cdot \dfrac{\lambda}{N_s}, n = 0,1,&\dots,N_s-1, \text{ and } \hat{\bm{p}}-\bm{p} = (\Delta x, \Delta y, \Delta \theta )\nonumber
+    \end{align}
+
+    \vspace{-0.5cm}
+
+    \begin{figure}
+      \input{./figures/06/caer.tex}
+    \end{figure}
+
+  \end{overlayarea}
+
+
+
+\end{frame}

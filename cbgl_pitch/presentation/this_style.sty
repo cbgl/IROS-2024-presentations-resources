@@ -1,0 +1,135 @@
+\usepackage{animate}
+\usepackage[absolute,overlay]{textpos}
+\usepackage[textfont={scriptsize}]{caption}
+\usepackage{booktabs}
+\usepackage{bm}
+\usepackage[normalem]{ulem}
+\usepackage{subcaption}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{setspace}
+\usepackage{rotating}
+\usepackage[export]{adjustbox}
+\usepackage{amsmath}
+
+\usepackage{multimedia}
+
+\usepackage{transparent}
+\usetheme{Boadilla}
+
+\newcommand\email[1]{\def\insertemail{#1}}
+\newcommand{\placebottom}{\vskip0pt plus 1filll}
+\providecommand\insertemail{\texttt{alefilot@iti.gr}}
+% No slide numbering
+
+\setbeamertemplate{footline}
+{
+\leavevmode%
+\hbox{%
+\begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+\usebeamerfont{author in head/foot}\insertshortauthor~~(\insertshortinstitute)
+\end{beamercolorbox}%
+\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+\usebeamerfont{title in head/foot}\insertshorttitle
+\end{beamercolorbox}%
+%\begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+%\usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+%%#turning the next line into a comment, erases the frame numbers
+%%\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+%\end{beamercolorbox}}%
+\begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,center]{date in head/foot}%
+\usebeamerfont{date in head/foot}{}
+%#turning the next line into a comment, erases the frame numbers
+\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+\end{beamercolorbox}}%
+\vskip0pt%
+}
+
+%remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{calc, arrows.meta, intersections, patterns, positioning, shapes.misc, fadings, through,decorations.pathreplacing}
+
+\usetikzlibrary{snakes}
+\usetikzlibrary{matrix,backgrounds}
+\usetikzlibrary{arrows.meta,chains,decorations.pathreplacing}
+\usetikzlibrary{intersections}
+\usetikzlibrary{angles, quotes}
+\newcommand{\tikzxmark}{%
+\tikz[scale=0.23] {
+    \draw[line width=0.7,line cap=round] (0,0) to [bend left=6] (1,1);
+    \draw[line width=0.7,line cap=round] (0.2,0.95) to [bend right=3] (0.8,0.05);
+}}
+\newcommand{\tikzcmark}{%
+\tikz[scale=0.23] {
+    \draw[line width=0.7,line cap=round] (0.25,0) to [bend left=10] (1,1);
+    \draw[line width=0.8,line cap=round] (0,0.35) to [bend right=1] (0.23,0);
+}}
+
+% Highlight algorithm parts with color
+\usetikzlibrary{calc}
+\usetikzlibrary{fit}
+\newcommand*{\tikzmk}[1]{\tikz[remember picture,overlay,] \node (#1) {};\ignorespaces}
+%define a boxing command, argument = colour of box
+\newcommand{\boxit}[1]{\tikz[remember picture,overlay]{\node[yshift=3pt,fill=#1,opacity=.25,fit={($(A)+(-0.038\linewidth,.3\baselineskip)$)($(B)+(.9\linewidth,-.3\baselineskip)$)}] {};}\ignorespaces}
+
+% BOXES
+\usepackage{environ}
+\usepackage[many]{tcolorbox}
+\NewEnviron{gg_box}{%
+  \vspace{0.5cm}
+  \begin{tcolorbox}[colback=black!5, colframe=white!80!, breakable]
+  %\begin{tcolorbox}[colback=white!10, colframe=black!30!, breakable]
+    \BODY
+  \end{tcolorbox}
+}
+
+\definecolor{sticky_note_yellow}{cmyk}{0.0, 0.0, 0.06, 0.0, 1.00}
+\NewEnviron{sticky_note_box}{%
+  \vspace{0.5cm}
+  \begin{tcolorbox}[colback = sticky_note_yellow, colframe=sticky_note_yellow, breakable]
+    \BODY
+  \end{tcolorbox}
+}
+
+\NewEnviron{bw_box}{%
+  \vspace{0.5cm}
+  \begin{tcolorbox}[colback=white!10, colframe=black!80!, arc=0pt,outer arc=0pt, breakable]
+    \BODY
+  \end{tcolorbox}
+}
+
+\NewEnviron{gw_box}{%
+  \vspace{0.5cm}
+  \begin{tcolorbox}[colback=white!10, colframe=black!10!, breakable]
+    \BODY
+  \end{tcolorbox}
+}
+
+\NewEnviron{bg_box}{%
+  \vspace{0.5cm}
+  \begin{tcolorbox}[colback=black!10, colframe=black!80!, arc=0pt,outer arc=0pt, breakable]
+    \BODY
+  \end{tcolorbox}
+}
+
+\definecolor{alg1}{RGB}{251,180,174}
+\definecolor{alg2}{RGB}{255,255,204}
+\definecolor{alg3}{RGB}{179,205,227}
+
+\definecolor{alg4}{RGB}{229,245,224}
+\definecolor{alg5}{RGB}{161,217,155}
+\definecolor{alg6}{RGB}{49,163,84}
+
+
+\definecolor{my_red}{rgb}{0.894,0.102,0.110}
+\definecolor{my_blue}{RGB}{71 71 186}
+
+\definecolor{exp1_blue}{RGB}{33 74 135}
+\definecolor{exp1_green}{RGB}{76 176 74}
+\definecolor{exp1_red}{RGB}{255 0 0}
+
+\newlength\imageheight
+\newlength\imagewidth

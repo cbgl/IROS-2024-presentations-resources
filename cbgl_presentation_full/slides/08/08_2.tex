@@ -1,0 +1,69 @@
+\begin{frame}[noframenumbering,fragile]{\underline{C}AER-\underline{B}ased \underline{G}lobal \underline{L}ocalisation: CBGL}
+
+
+  %%% CBGL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+  %% Bottom-n %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+  \begin{minipage}{0.46\textwidth}
+    \centering
+    \begin{algorithm}[H]\scriptsize
+      \caption{\texttt{CBGL}}
+      \begin{spacing}{1.2}
+        \begin{algorithmic}[1]
+          \REQUIRE $\mathcal{S}_R$, $\lambda$, $\bm{M}$, $(d_{\bm{l}}, d_\alpha)$, $k$
+          \ENSURE Pose estimate of sensor measuring $\mathcal{S}_R$ %$\hat{\bm{p}}$
+          \STATE \tikzmk{A} $A \leftarrow \texttt{calculate\_area}(\texttt{free}(\bm{M}))$
+          \STATE $\mathcal{H}, \mathcal{H}_1, \mathcal{H}_2 \leftarrow \{\varnothing\}$
+          \FOR {$i \leftarrow 0,1,\dots,d_{\bm{l}} \cdot A-1$}
+          \STATE $(\hat{x},\hat{y},\hat{\theta}) \leftarrow \texttt{rand()}$: $(x,y) \in \texttt{free}(\bm{M})$, $\hat{\theta} \in [-\pi,+\pi)$
+          \FOR {$j \leftarrow 0,1,\dots, d_{\alpha}-1$}
+          \STATE $\mathcal{H} \leftarrow \{\mathcal{H}, (\hat{x}, \hat{y}, \hat{\theta} + j \cdot 2\pi / d_{\alpha})\}$     \label{alg:cbgl:h}
+          \ENDFOR
+          \ENDFOR \tikzmk{B}\boxit{alg1}
+          \STATE $\mathcal{H}_1 \leftarrow$ \texttt{bottom}$\_k\_\texttt{poses}(\mathcal{S}_R, \bm{M}, \mathcal{H}, k, \lambda)$ \hfill {(Alg. \ref{alg:bottom_k}})
+          \FOR {\tikzmk{A} $i \leftarrow 0,1,\dots,|\mathcal{H}_1|-1$}
+          \STATE $\mathcal{H}_2 \leftarrow \{\mathcal{H}_2, \texttt{sm2}(\mathcal{S}_R, \lambda, \bm{M}, \mathcal{H}_1[i])\}$ \hfill {(e.g. \texttt{ICP}})
+          \ENDFOR \tikzmk{B}\boxit{alg3}
+          \RETURN \texttt{bottom}$\_k\_\texttt{poses}(\mathcal{S}_R, \bm{M}, \mathcal{H}_2, 1, \lambda)$
+        \end{algorithmic}
+      \end{spacing}
+      \label{alg:cbgl}
+    \end{algorithm}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.46\textwidth}
+    \centering
+      \begin{algorithm}[H]\scriptsize
+        \caption{\texttt{bottom}\_$k$\_\texttt{poses}}
+        \begin{spacing}{1.2}
+          \begin{algorithmic}[1]
+            \REQUIRE $\mathcal{S}_R$, $\bm{M}$, $\mathcal{P}$, $k$, $\lambda$
+            \ENSURE Set of $k$ poses of $\mathcal{P}$ with least CAER values, $\mathcal{P}_{\triangledown}$
+            \STATE $\Psi \leftarrow \{\varnothing \}$
+            \FOR {$q \leftarrow 0,1,\dots,|\mathcal{P}|-1$}
+            \STATE $\mathcal{S}_V^{\hspace{1pt} q} \leftarrow \mathcal{S}_V^{\bm{M}}(\mathcal{P}[q]) = \texttt{scan\_map}(\bm{M}, \mathcal{P}[q], \lambda)$
+            \STATE $\Psi \leftarrow \{\Psi, \texttt{CAER}(\mathcal{S}_R, \mathcal{S}_V^{\hspace{1pt} q}) \}$)
+            \ENDFOR
+            \STATE $[\Psi_{\uparrow}, \texttt{I}^{\ast}] \leftarrow \texttt{sort}(\Psi, \texttt{asc})$, such that $\Psi[\texttt{I}^{\ast}] = \Psi_{\uparrow}$
+            \RETURN $\mathcal{P}_{\triangledown} = \{\mathcal{P}[\texttt{I}^{\ast}[0]], \mathcal{P}[\texttt{I}^{\ast}[1]], \dots, \mathcal{P}[\texttt{I}^{\ast}[k-1]]\}$
+          \end{algorithmic}
+        \end{spacing}
+        \label{alg:bottom_k}
+      \end{algorithm}
+  \end{minipage}
+
+  \begin{textblock*}{6cm}(1.4cm,3.9cm) % {block width} (coords)
+    \textcolor{black}{*\texttt{disperse dense pose hypotheses cloud into map's traversable area}}
+  \end{textblock*}
+
+  \begin{textblock*}{7cm}(1.08cm,7.1cm) % {block width} (coords)
+    \textcolor{black}{\small* $\mathcal{H}_2 \leftarrow$ \texttt{scan-to-map-scan match}($\mathcal{H}_1$, $\mathcal{S}_R$)}
+  \end{textblock*}
+
+\end{frame}

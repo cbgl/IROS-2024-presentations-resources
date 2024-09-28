@@ -1,0 +1,26 @@
+\begin{frame}[noframenumbering]{Simulations in 45402 environments$^*$ (3/3)}
+
+    \begin{minipage}{0.25\textwidth}
+      \begin{bw_box}
+      \begin{align}
+        r_{\max} = \inf \nonumber \\
+        \lambda = 270 / 360 \text{ deg} \nonumber \\
+        \sigma_{\bm{M}} = 0.05 \text{ m} \nonumber \\
+        \sigma_R = 0.03 \text{ m} \nonumber \\
+        4 \ \texttt{sm2} \text{ methods} \nonumber
+      \end{align}
+      \end{bw_box}
+    \end{minipage}%
+    \hspace{0.03cm}\begin{minipage}{.74\textwidth}
+      \begin{bw_box}
+        \begin{itemize}\small
+          \item \textcolor{blue}{$\lambda_{\texttt{NDT}} = \lambda_{\texttt{FastGICP}} = \lambda_{\texttt{FastVGICP}} = 270$ deg} but \textcolor{magenta}{$\lambda_{\texttt{x1}} = 360$ deg}
+          \item \textcolor{blue}{$\overline{e_{\mathcal{H}_1}}(\texttt{NDT}) \simeq \overline{e_{\mathcal{H}_1}}(\texttt{FastGICP}) \simeq \overline{e_{\mathcal{H}_1}}(\texttt{FastVGICP})$} \textcolor{magenta}{$\simeq \overline{e_{\mathcal{H}_1}}(\texttt{x1})$}
+        \item Execution time $\sim 1.0 \text{ sec } / 100$ m$^2$ @ $1$ ray/deg
+      \end{itemize}
+      \end{bw_box}
+    \end{minipage}
+
+  \placebottom \vspace{-1.0cm} \tiny {* Courtesy of the Department of Computer Science, University of Freiburg, \url{http://ais.informatik.uni-freiburg.de/slamevaluation/datasets.php}}
+
+\end{frame}

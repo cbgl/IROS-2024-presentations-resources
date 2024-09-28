@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Potentially add some space at the top of the poster
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-3\baselineskip}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Draw the header as a TIKZ picture
+%
+% Using TIKZ to allow for easy alignment
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+\begin{tikzpicture}[x=0.5\textwidth]
+    % Dummy nodes at edges for spacing
+    % TODO - a better way?
+    \node at (+1, 0) {};
+    \node at (-1, 0) {};
+    % Set the size of the badges
+    \def \badgeheight {0.05\textwidth}
+    % Title text
+    \node[inner sep=0,text width=0.5\textwidth,text centered,font=\Huge] (Title) at (0.175,0)
+    {
+      {\Huge \textbf{CBGL: Fast Monte Carlo Passive Global Localisation of 2D LIDAR Sensor}}\\
+      {\huge Alexandros Filotheou}\\
+      %\vspace{-0.3\baselineskip}
+      {\Large School of Electrical and Computer Engineering, Aristotle University of Thessaloniki, Greece}
+    };
+
+    % AUTh badge
+    \node [mybox] (AUTh Badge) at (-0.6, 0) {
+        \includegraphics[height=\badgeheight]{../badges/auth-banner-horizontal-300ppi.png}
+    };
+    % IROS logo
+    \node [mybox] (box) at (-0.9, 0) {
+        \includegraphics[height=0.14\textwidth]{../badges/iros.png}
+    };
+    % YouTube QR
+    %\node [mybox] (box) at (0.875, 0) {
+        %\includegraphics[height=0.07\textwidth]{../badges/ytqr.png}
+    %};
+    % YouTube QR
+    \node [mybox] (box) at (0.875, 0) {
+        \includegraphics[height=0.07\textwidth]{../badges/cbgl_github.png}
+    };
+\end{tikzpicture}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Spacing between title and main body
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-3\baselineskip}

@@ -1,0 +1,44 @@
+\begin{frame}[noframenumbering]{Simulations in large environments (2/3)}
+
+  \begin{overlayarea}{\textwidth}{\textheight}
+    \leavevmode
+    \begin{minipage}{0.15\textwidth}\vspace{-2cm}
+      \begin{align}
+        r_{\max} &= 10.0 \text{ m} \nonumber \\
+        \lambda &= 360 \text{ deg} \nonumber \\
+        \sigma_R &= 0.05 \text{ m} \nonumber
+      \end{align}
+    \end{minipage}%
+      \begin{minipage}{.85\textwidth}
+      \begin{figure}
+        \centering
+        \begin{subfigure}{0.45\textwidth}
+          \centering
+          \input{./figures/09/b/map_warehouse_blur.tex}
+        \end{subfigure}%
+        \begin{subfigure}{0.45\textwidth}\hspace{-0.2cm}
+          \input{./figures/09/b/map_willowgarage_blur.tex}
+        \end{subfigure}
+      \end{figure}
+    \end{minipage}
+
+
+    \begin{textblock*}{5cm}(5.7cm,3.5cm) % {block width} (coords)
+      \textcolor{black}{$\bullet$ Area $ = 745$ m$^2$ \\
+                        $\bullet$ median $e_{xy} = 0.04$ m \\
+                        $\bullet$ median $e_{\theta} < 1.0$ deg \\
+                        $\bullet$ $94\%$ with error $< 0.5$ m \\
+                        $\bullet$ median $T = 8.3$ sec}
+    \end{textblock*}
+
+    \begin{textblock*}{5cm}(11.5cm,3.5cm) % {block width} (coords)
+      \textcolor{black}{$\bullet$ Area $ = 2015$ m$^2$ \\
+                        $\bullet$ median $e_{xy} = 0.14$ m \\
+                        $\bullet$ median $e_{\theta} = 10$ deg\\
+                        $\bullet$ $90 \%$ with error $< 0.5$ m \\
+                        $\bullet$ median $T = 3.7$ sec}
+    \end{textblock*}
+
+  \end{overlayarea}
+
+\end{frame}

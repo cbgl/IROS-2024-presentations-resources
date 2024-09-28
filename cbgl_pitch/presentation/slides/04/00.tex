@@ -1,0 +1,45 @@
+\begin{frame}{Experiments}
+
+
+Real-world:
+\begin{columns}[T]\hspace{-5cm}
+    \begin{column}{0.7\textwidth}
+        \begin{itemize}
+          \item $180$ m$^2$
+          \item Noisy map
+          \item $6669$ range measurements
+        \end{itemize}
+    \end{column}\hspace{-11.5cm}
+    \begin{column}{0.3\textwidth}
+        \begin{tikzpicture}
+            \draw[decorate,decoration={brace,amplitude=7pt,raise=3pt}]
+            (0,0) -- (0,-1.8)
+            node [midway,right=20pt] {\textcolor[HTML]{4E9A06}{$99.1\% < 0.50$ m} \ @ \ \textcolor[HTML]{3465A4}{$1.6$ sec}};
+        \end{tikzpicture}
+    \end{column}
+\end{columns}
+
+\vspace{1em}
+
+\visible<2>{
+    Synthetic:
+  \begin{columns}[T]\hspace{-5cm}
+      \begin{column}{0.7\textwidth}
+          \begin{itemize}
+            \item $\downarrow$ Maximal radial range
+            \item $\downarrow$ Angular field of view
+            \item $\uparrow$ Measurement noise
+            \item Repeated surroundings
+          \end{itemize}
+      \end{column}\hspace{-11.5cm}
+      \begin{column}{0.3\textwidth}
+          \begin{tikzpicture}
+              \draw[decorate,decoration={brace,amplitude=10pt,raise=3pt}]
+              (0,0) -- (0,-2.5)
+              node [midway,right=20pt] {$\min$ errors; $\max$ \#poses with error $< 0.50$ m};
+          \end{tikzpicture}
+      \end{column}
+  \end{columns}
+}
+
+\end{frame}

@@ -1,0 +1,62 @@
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,442); %set diagram left start at 0, and has height of 442
+
+%Image [id:dp7345435744663564]
+\draw (40.99,137.25) node  {\includegraphics[width=52.5pt,height=40.71pt]{./figures/06/env.png}};
+%Image [id:dp030872284892191182]
+\draw (40.99,217.99) node  {\includegraphics[width=52.5pt,height=39.8pt]{./figures/06/map.png}};
+%Image [id:dp9855156395144604]
+\draw (140.99,217.99) node  {\includegraphics[width=52.5pt,height=52.5pt]{./figures/06/sv.png}};
+%Image [id:dp0883330060973122]
+\draw (140.49,137.25) node  {\includegraphics[width=52.5pt,height=52.5pt]{./figures/06/sr.png}};
+%Straight Lines [id:da3336180290494899]
+\draw    (176,137.2) -- (246.75,137) ;
+%Straight Lines [id:da6380620434779032]
+\draw    (176,217.53) -- (246.75,217.74) ;
+%Straight Lines [id:da15384576533302807]
+\draw    (246.75,137.25) -- (246.29,161.25) ;
+\draw [shift={(246.25,163.25)}, rotate = 271.1] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da8338083407403734]
+\draw    (246.75,218.05) -- (246.88,193.93) ;
+\draw [shift={(246.89,191.93)}, rotate = 90.31] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da4365786762663775]
+\draw    (77.39,137.25) -- (101.89,137.25) ;
+\draw [shift={(103.89,137.25)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da9500470672515446]
+\draw    (77.39,217.99) -- (101.89,217.99) ;
+\draw [shift={(103.89,217.99)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Shape: Rectangle [id:dp41358298385049075]
+\draw   (5.99,110.1) -- (75.99,110.1) -- (75.99,164.39) -- (5.99,164.39) -- cycle ;
+%Shape: Rectangle [id:dp8289234142790565]
+\draw   (5.99,191.46) -- (75.99,191.46) -- (75.99,244.52) -- (5.99,244.52) -- cycle ;
+%Shape: Rectangle [id:dp5428699224303526]
+\draw   (105.49,102.25) -- (175.49,102.25) -- (175.49,172.25) -- (105.49,172.25) -- cycle ;
+%Shape: Rectangle [id:dp42147633315554844]
+\draw   (105.99,182.99) -- (175.99,182.99) -- (175.99,252.99) -- (105.99,252.99) -- cycle ;
+%Image [id:dp18261613586200598]
+\draw (404.13,180.55) node {\animategraphics[scale=0.2,autoplay,loop,angle=-257.73]{2}{./figures/06/both_}{5}{11}};
+
+%Right Arrow [id:dp22701000099022495]
+\draw   (269,168.2) -- (311,168.2) -- (311,158.2) -- (339,178.2) -- (311,198.2) -- (311,188.2) -- (269,188.2) -- cycle ;
+%Straight Lines [id:da3396996135296311]
+\draw    (45,177.67) -- (225,177.67) ;
+\draw [shift={(227,177.67)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da9094547962055524]
+\draw    (45,177.67) -- (45,190.07) ;
+
+% Text Node
+\draw    (229.16,165) -- (265.16,165) -- (265.16,190) -- (229.16,190) -- cycle  ;
+\draw (247.16,177.5) node   [align=left] {\texttt{sm2}};
+
+% Text Node
+\draw (3,79.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {Environment $E$};
+% Text Node
+\draw (3,256) node [anchor=north west][inner sep=0.75pt]   [align=left] {Map $\bm{M}$ of $E$};
+% Text Node
+\draw (132,77.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\mathcal{S}_R$ captured from \textcolor{blue}{$\bm{p}$}};
+% Text Node
+\draw (131,266.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\mathcal{S}_V$ captured from \textcolor{red}{$\hat{\bm{p}}$}};
+
+\end{tikzpicture}

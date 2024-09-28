@@ -1,0 +1,29 @@
+\documentclass[landscape,a0b,final,a4resizeable]{a0poster}
+
+\usepackage{cbgl_style}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The document environment starts here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+  \begin{poster}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % Header
+  \input{header.tex}
+
+  \begin{multicols}{3}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Content
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \input{column_a.tex}
+    \input{column_b.tex}
+    \input{column_c.tex}
+
+  \end{multicols}
+
+\end{poster}
+
+\end{document}
