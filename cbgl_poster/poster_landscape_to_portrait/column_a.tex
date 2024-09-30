@@ -1,0 +1,73 @@
+\large
+
+\mysection{Setup \& Motivation}
+
+\vspace{2.5\baselineskip}
+
+\begin{center}
+\begin{tikzpicture}
+  \begin{scope}[xshift=0cm,yshift=-2cm]
+  \begin{pgflowlevelscope}{\pgftransformscale{3}}
+    \node [] (box1){
+      \input{./figures/sr5_sm0_init.tex}
+    };
+    \end{pgflowlevelscope}
+  \end{scope}
+\end{tikzpicture}
+\end{center}
+
+\vspace{13.5cm}
+
+\noindent\fcolorbox{white}{white}{%
+    \minipage[t]{\dimexpr0.48\linewidth-2\fboxsep-2\fboxrule\relax}
+      Unknown LIDAR \textcolor{magenta}{pose $\bm{p}(x,y,\theta)$} and
+\textcolor[RGB]{0,71,145}{estimate $\hat{\bm{p}}(\hat{x},\hat{y},\hat{\theta})$}. $\textcolor{magenta}{\bm{p}} - \textcolor[RGB]{0,71,145}{\hat{\bm{p}}} = (\Delta \hat{\bm{l}}, \Delta\hat{\theta})$
+    \endminipage}\hfill
+    \fcolorbox{white}{white}{%
+    \minipage[t]{\dimexpr0.48\linewidth-2\fboxsep-2\fboxrule\relax}
+
+\textcolor{magenta}{Real $\mathcal{S}_R(\bm{p})$} and
+\textcolor[RGB]{0,71,145}{virtual $\mathcal{S}_V(\hat{\bm{p}})$}
+scans, in the local coordinate frame of each sensor
+\endminipage}
+
+% ------------------------------------------------------------------------------
+\begin{center}
+\vspace{2.5\baselineskip}
+  \noindent\makebox[\linewidth]{\textcolor[RGB]{122 125 127}{\rule{0.15\paperwidth}{0.4pt} $\diamond[-7.5pt]$ \rule{0.15\paperwidth}{0.4pt}}}
+\vspace{2.0\baselineskip}
+\end{center}
+% ------------------------------------------------------------------------------
+
+{\Large
+\begin{definition}
+  \hspace{-10px} The Cumulative Absolute Error per Ray (CAER) metric
+\begin{align}
+  \text{CAER}(\textcolor{magenta}{\mathcal{S}_R},\textcolor[RGB]{0,71,145}{\mathcal{S}_V}) \triangleq \sum\limits_{n=0}^{\text{scan rays}-1} \Big| \textcolor{magenta}{\mathcal{S}_R}[n]-\textcolor[RGB]{0,71,145}{\mathcal{S}_V}[n]\Big| \label{eq:caer}
+\end{align}
+\end{definition}
+}
+
+\begin{center}
+\begin{tikzpicture}
+  \begin{scope}[xshift=1.2cm,yshift=-2.15cm]
+  \begin{pgflowlevelscope}{\pgftransformscale{3}}
+    \node [] (box1){
+      \subfloat{\hspace{0.5cm}\input{./figures/caer_all.tex}}\vspace{-1.5cm}
+    };
+    \end{pgflowlevelscope}
+  \end{scope}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+  \begin{scope}[xshift=0cm,yshift=-8.8cm]
+  \begin{pgflowlevelscope}{\pgftransformscale{3}}
+     \node [] (box2){
+      \subfloat{\hspace{-0.3cm}\input{./figures/face_bottom.tex}}
+    };
+    \end{pgflowlevelscope}
+  \end{scope}
+\end{tikzpicture}
+\end{center}
+
+\newpage

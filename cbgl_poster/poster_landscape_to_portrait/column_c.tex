@@ -1,0 +1,73 @@
+\mysection{Experiments with real and synthetic data}
+
+\vspace{0.5\baselineskip}
+
+
+\begin{center}\hspace{-4em}
+\setlength\tabcolsep{20px}
+\begin{tabular}{lccc}
+\begin{tabular}[c]{@{}l@{}}In $ > 6000$ \\ attempts\end{tabular} & \begin{tabular}[c]{@{}l@{}}Mean \\ Position \\ Error {[}m{]}\end{tabular} & \begin{tabular}[c]{@{}l@{}}Mean \\ Orientation \\ Error {[}rad{]}\end{tabular} & \begin{tabular}[c]{@{}l@{}}Mean\\  Execution \\ Time {[}sec{]}\end{tabular} \\ \toprule
+\textcolor[RGB]{145 74 0}{ALS [1]} & \textcolor[RGB]{145 74 0}{$0.500$} & \textcolor[RGB]{145 74 0}{$1.956$} & \textcolor[RGB]{145 74 0}{$6.15$}                                                                        \\
+\textcolor[RGB]{0 71 145}{CBGL} & \textcolor[RGB]{0 71 145}{$\mathbf{0.041}$} & \textcolor[RGB]{0 71 145}{$\mathbf{0.011}$} & \textcolor[RGB]{0 71 145}{$\mathbf{1.61}$}    \\ \bottomrule
+\end{tabular}
+\label{tbl:a}
+\end{center}
+
+
+\begin{center}
+\begin{tikzpicture}
+  \begin{scope}[xshift=-0.72cm,yshift=-3cm]
+  \begin{pgflowlevelscope}{\pgftransformscale{3.2}}
+    \node [] (box1){
+      \input{./figures/trajectory.tex}
+    };
+    \end{pgflowlevelscope}
+  \end{scope}
+\end{tikzpicture}
+\end{center}
+
+
+\begin{center}
+\begin{tikzpicture}
+  \begin{scope}[xshift=-0.9cm,yshift=-8cm]
+  \begin{pgflowlevelscope}{\pgftransformscale{2.8}}
+    \node [] (box1){
+      \input{./figures/awesomeness.tex}
+    };
+    \end{pgflowlevelscope}
+  \end{scope}
+\end{tikzpicture}
+\end{center}
+
+% ------------------------------------------------------------------------------
+\vspace{23.7\baselineskip}
+\begin{center}
+  \noindent\makebox[\linewidth]{\textcolor[RGB]{122 125 127}{\rule{0.15\paperwidth}{0.4pt} $\diamond[-7.5pt]$ \rule{0.15\paperwidth}{0.4pt}}}
+\end{center}
+\vspace{2\baselineskip}
+% ------------------------------------------------------------------------------
+
+\begin{center}
+\begin{tikzpicture}
+  \begin{scope}[xshift=-1.4cm,yshift=-3.3cm]
+  \begin{pgflowlevelscope}{\pgftransformscale{3}}
+    \node [] (box1){
+      \input{./figures/xyte.tex}
+    };
+    \end{pgflowlevelscope}
+  \end{scope}
+\end{tikzpicture}
+\end{center}
+
+
+% ------------------------------------------------------------------------------
+\vspace{22cm}
+\begin{center}
+  \noindent\makebox[\linewidth]{\textcolor[RGB]{122 125 127}{\rule{0.15\paperwidth}{0.4pt} $\diamond[-7.5pt]$ \rule{0.15\paperwidth}{0.4pt}}}
+\end{center}
+\vspace{3\baselineskip}
+% ------------------------------------------------------------------------------
+
+\vspace{-1cm}
+[1] Naoki Akai, ``Reliable Monte Carlo Localization\\
+for Mobile Robots", \textit{Journal of Field Robotics}, 2023
