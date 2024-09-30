@@ -284,37 +284,3 @@
 \renewcommand{\diamond}[1][0pt]{%
   \mathrel{\raisebox{#1}{$\olddiamond$}}%
 }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% The document environment starts here
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{document}
-\begin{poster}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Header
-\input{header.tex}
-
-\begin{multicols}{3}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Content
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{column_a.tex}
-\input{column_b.tex}
-\input{column_c.tex}
-
-%\small{
-%\bibliographystyle{unsrt}
-%\bibliographystyle{../misc/natbib}
-%\bibliography{../misc/library,../misc/biblio,../misc/bibdesk-porbanz}
-%}
-
-\end{multicols}
-
-\end{poster}
-
-\end{document}
