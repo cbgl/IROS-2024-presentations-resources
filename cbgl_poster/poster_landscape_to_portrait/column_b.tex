@@ -13,28 +13,18 @@
       signal from=west,
       signal to=east,
       signal pointer angle=110,
-    },
-    arrownot/.style={
-      %draw,
-      minimum height=17em,
-      inner sep=1em,
-      shape=signal,
-      signal from=west,
-      signal to=east,
-      signal pointer angle=110,
     }
   }
   \begin{scope}[start chain=transition going right,node distance=-\pgflinewidth]
-    \node[arrownot,right=1cm of s1,on chain,text width=12cm] {};
-    \node[arrow,on chain,text width=12cm] {};
-    \node[arrow,on chain,text width=2cm] {};
+    \node[arrow,on chain,right=15cm of s1, text width=13cm] {};
+    \node[arrow,on chain,text width=3cm] {};
   \end{scope}
 \end{tikzpicture}
 
 
 \begin{minipage}[t]{\textwidth}
-\begin{minipage}[t]{\textwidth}\vspace{-8.4cm}\hspace{-25em}
-  \Large Generate hypotheses randomly \hspace{1.5em} Compute CAER (eq. \ref{eq:caer}) for each \hspace{1em} Rank them
+\begin{minipage}[t]{\textwidth}\vspace{-8.4cm}\hspace{-31em}
+  \Large Generate hypotheses randomly \hspace{2.2em} Compute CAER (eq. \ref{eq:caer}) for each \hspace{2.0em} Rank them
 \end{minipage}
 \hfill
 \begin{minipage}[t]{\textwidth}
