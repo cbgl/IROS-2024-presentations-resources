@@ -12,17 +12,29 @@
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Header
   \input{header.tex}
+%  \begin{multicols}{3}
 
-  \begin{multicols}{3}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %% Content
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %\input{column_a.tex}
+    %\input{column_b.tex}
+    %\input{column_c.tex}
 
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % Content
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %\end{multicols}
+
+  \noindent
+  \begin{minipage}[t]{0.29\textwidth}\vspace{10em}
     \input{column_a.tex}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.32\textwidth}
     \input{column_b.tex}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.35\textwidth}\vspace{10em}
     \input{column_c.tex}
-
-  \end{multicols}
+  \end{minipage}
 
 \end{poster}
 
