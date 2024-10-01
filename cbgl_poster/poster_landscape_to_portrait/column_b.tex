@@ -1,12 +1,37 @@
 \tikzstyle{block4} = [rectangle, outer color=camlightblue!10, inner color=camlightblue!10, text width=80cm, rounded corners=20pt, minimum height=17em]
 \definecolor{b}{RGB}{245,250,255}
+
 \begin{tikzpicture}\hspace{-26.25cm}
-\node (A) [block4] at (0,0) {};
+  \node (A) [block4] at (0,0) {};
+  \node (s1) [] at (-36,0) {};
+  \tikzset{
+    arrow/.style={
+      draw,
+      minimum height=17em,
+      inner sep=1em,
+      shape=signal,
+      signal from=west,
+      signal to=east,
+      signal pointer angle=110,
+    }
+  }
+  \begin{scope}[start chain=transition going right,node distance=-\pgflinewidth]
+    \node[arrow,right=1cm of s1,on chain,text width=12cm] {};
+    \node[arrow,on chain,text width=12cm] {};
+    \node[arrow,on chain,text width=2cm] {};
+  \end{scope}
 \end{tikzpicture}
 
+
+\begin{minipage}[t]{\textwidth}
+\begin{minipage}[t]{\textwidth}\vspace{-8.4cm}\hspace{-25em}
+  \Large Generate hypotheses randomly \hspace{1.5em} Compute CAER (eq. \ref{eq:caer}) for each \hspace{1em} Rank them
+\end{minipage}
+\hfill
+\begin{minipage}[t]{\textwidth}
 \begin{center}
 \begin{tikzpicture}
-  \begin{scope}[xshift=0cm,yshift=2.3cm]
+  \begin{scope}[xshift=8.5cm,yshift=2.45cm]
   \begin{pgflowlevelscope}{\pgftransformscale{3}}
      \node [] (box3){
       \subfloat{\hspace{0cm}\input{./figures/face_top.tex}}
@@ -15,6 +40,8 @@
   \end{scope}
 \end{tikzpicture}
 \end{center}
+\end{minipage}
+\end{minipage}
 
 \vspace{1em}
 
